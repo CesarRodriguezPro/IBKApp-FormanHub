@@ -49,36 +49,29 @@ class MainConstructor extends StatelessWidget {
                   child: new TextFormField(
                     decoration: new InputDecoration(
                       labelStyle: TextStyle(
-                          color: Colors.blueGrey[900]
+                          color: Colors.blueGrey[50]
                       ),
-                      fillColor: Colors.blue[50],
+                      fillColor: Colors.blue[50].withOpacity(0.2),
                       filled: true,
-                      icon:new Icon(
-                        Icons.account_circle,
-                        color: Colors.yellowAccent,),
-                      labelText: 'Username',
-
+                      labelText: 'User Name'
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
-                  child: new TextFormField(
+                  child:TextField(
+                    obscureText: true,
                     decoration: new InputDecoration(
-                      labelStyle: TextStyle(
-
-                          color: Colors.blueGrey[900]
-                      ),
-                      fillColor: Colors.blue[50],
-                      filled: true,
-                      icon:new Icon(
-                        Icons.vpn_key,
-                        color: Colors.yellowAccent,),
-                      labelText: 'password',
-
+                        labelStyle: TextStyle(
+                            color: Colors.blueGrey[50]
+                        ),
+                        fillColor: Colors.blue[50].withOpacity(0.2),
+                        filled: true,
+                        labelText: 'Password'
                     ),
-                  ),
+                  )
                 ),
+                FlatButton(child: Text('Log In', ), onPressed: () {},)
               ],
             ),
           ),
